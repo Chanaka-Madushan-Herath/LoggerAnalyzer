@@ -14,23 +14,27 @@ import java.util.Properties;
 
 public class SendEmail {
 
-    public void sender(){
+    public void sender(String SenderMail, String ReceiverMail, String MailSubject, String MailBody) {
 
+        String hostname= "smtp.mailgun.org";
+        String Protocol= "smtps";
+        String Username= "postmaster@sandbox1bcb3956d2964f0d8397fd610d0b80be.mailgun.org";
+        String password= "afcbf72bdbe770fcf2377cd42b4370f8-0f472795-ce7f06f5";
         Properties props = System.getProperties();
-        props.put("mail.smtps.host", "smtp.mailgun.org");
+        props.put("mail.smtps.host", hostname);
         props.put("mail.smtps.auth", "true");
 
         Session session = Session.getDefaultInstance(props, null);
         Message msg = new MimeMessage(session);
         try {
-            msg.setFrom(new InternetAddress("chanaka.herath.1998@gmail.com"));
+            msg.setFrom(new InternetAddress(SenderMail));
         } catch (MessagingException e) {
             e.printStackTrace();
         }
 
         InternetAddress[] addrs = new InternetAddress[0];
         try {
-            addrs = InternetAddress.parse("cmadushan1998@gmail.com", false);
+            addrs = InternetAddress.parse(ReceiverMail, false);
         } catch (AddressException e) {
             e.printStackTrace();
         }
@@ -41,12 +45,12 @@ public class SendEmail {
         }
 
         try {
-            msg.setSubject("Hello");
+            msg.setSubject(MailSubject);
         } catch (MessagingException e) {
             e.printStackTrace();
         }
         try {
-            msg.setText("Testing some Mailgun awesomness");
+            msg.setText(MailBody);
         } catch (MessagingException e) {
             e.printStackTrace();
         }
@@ -56,15 +60,15 @@ public class SendEmail {
             e.printStackTrace();
         }
 
-        SMTPTransport t =
-                null;
+        SMTPTransport t = null;
         try {
-            t = (SMTPTransport) session.getTransport("smtps");
+            t = (SMTPTransport) session.getTransport(Protocol);
         } catch (NoSuchProviderException e) {
             e.printStackTrace();
         }
         try {
-            t.connect("smtp.mailgun.org", "postmaster@sandbox1bcb3956d2964f0d8397fd610d0b80be.mailgun.org", "afcbf72bdbe770fcf2377cd42b4370f8-0f472795-ce7f06f5");
+            assert t != null;
+            t.connect(hostname, Username, password);
         } catch (MessagingException e) {
             e.printStackTrace();
         }
