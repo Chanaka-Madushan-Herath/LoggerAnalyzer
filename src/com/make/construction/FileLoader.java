@@ -26,7 +26,7 @@ public class FileLoader {
 
         while ((line = this.bufferedReader.readLine()) != null){
 
-            if(line.equals("ERROR")){
+            if(line.equals("ERROR")) {
                 System.out.println("ERROR");
                 errorState = true;
             }

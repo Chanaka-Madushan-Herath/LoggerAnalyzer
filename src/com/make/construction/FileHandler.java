@@ -2,19 +2,11 @@ package com.make.construction;
 
 import java.io.BufferedReader;
 
-public class FileHandler {
+public abstract class FileHandler {
 
+    String filePath;
 
-    private static BufferedReader bufferedReader;
-
-    public static void getHandler(){
-
-        if (bufferedReader == null){
-            bufferedReader = new BufferedReader()
-        }
-
+    public FileHandler(String filePath) {
+        this.filePath = filePath;
     }
-
-
-
 }
