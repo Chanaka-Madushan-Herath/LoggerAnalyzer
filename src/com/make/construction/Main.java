@@ -2,8 +2,9 @@ package com.make.construction;
 
 public class Main {
 
-  public static void main(String[] args) {
-    System.out.println("d");
+  public static void main(String[] args) throws Exception {
+    LogFileRepository logFileRepository=new LogFileRepository();
+    logFileRepository.readFile();
   }
 
 }
