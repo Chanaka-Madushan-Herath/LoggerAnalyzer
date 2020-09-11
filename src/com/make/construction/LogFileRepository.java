@@ -1,10 +1,9 @@
 package com.make.construction;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.FileWriter;
 
 
 public class LogFileRepository {
@@ -27,6 +26,7 @@ public class LogFileRepository {
 
                 errorList.add(element);
             }
+
         }
 //        System.out.println(errorlist);
         for (int i = 0; i < errorList.size(); i++) {
@@ -35,7 +35,15 @@ public class LogFileRepository {
 
 
         }
+        String e = list.get(list.size()-1);
+        System.out.println("\n"+e);
+
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("C:\\Users\\hansa\\IdeaProjects\\LoggerAnalyzer\\src\\com\\make\\construction\\timeStamp.txt",true));
+        bufferedWriter.write(e);
+        bufferedWriter.close();
+
 
     }
+
 }
 

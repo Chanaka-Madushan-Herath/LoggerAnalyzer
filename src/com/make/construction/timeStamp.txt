@@ -1,0 +1,1 @@
+2020-01-25 17:33:13,713 [  41171]   INFO - ateSettings.impl.UpdateChecker - www.jetbrains.com 
