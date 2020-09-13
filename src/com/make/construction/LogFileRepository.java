@@ -35,11 +35,16 @@ public class LogFileRepository {
 
 
         }
+
         String e = list.get(list.size()-1);
         System.out.println("\n"+e);
 
+
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("C:\\Users\\hansa\\IdeaProjects\\LoggerAnalyzer\\src\\com\\make\\construction\\timeStamp.txt",true));
-        bufferedWriter.write(e);
+        new FileWriter("C:\\Users\\hansa\\IdeaProjects\\LoggerAnalyzer\\src\\com\\make\\construction\\timeStamp.txt", false).close();
+
+        String[] res = e.split("[,]", 0);
+        bufferedWriter.write(res[0]);
         bufferedWriter.close();
 
 
