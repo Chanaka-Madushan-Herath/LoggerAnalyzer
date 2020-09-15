@@ -6,10 +6,6 @@ import kong.unirest.Unirest;
 import kong.unirest.UnirestException;
 
 public class SendEmail {
-    public static void sendMail(String sender,String receiver, String subject, String body){
-        JsonNode jsonNode = sendSimpleMessage(sender, receiver, subject, body);
-        System.out.println("Successfully....");
-    }
 
     public static JsonNode sendSimpleMessage(String sender,String receiver, String subject, String body) throws UnirestException {
 
@@ -23,8 +19,9 @@ public class SendEmail {
                 .field("subject", subject)
                 .field("text", body)
                 .asJson();
-
+        System.out.println("Successfully....");
         return request.getBody();
+
     }
 }
 
