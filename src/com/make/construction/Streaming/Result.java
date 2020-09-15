@@ -3,20 +3,31 @@ package com.make.construction.Streaming;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Result {
+public class Result implements LineHandler{
 
-    private List<String> list;
-    private String lastLine;
+    private List<String> emailBuffer;
+    private String timeStamp;
 
     public Result() {
-        this.list = new ArrayList<>();
+        this.emailBuffer = new ArrayList<>();
     }
 
-    public String getLastLine() {
-        return lastLine;
+    public List<String> getEmailBuffer() {
+        return emailBuffer;
     }
 
-    public void setLastLine(String lastLine) {
-        this.lastLine = lastLine;
+    public void setEmailBuffer(String message) {
+        this.emailBuffer.add(message);
+    }
+
+
+    @Override
+    public void setLine(String message) {
+        this.timeStamp = message;
+    }
+
+    @Override
+    public String getLine() {
+        return this.timeStamp;
     }
 }

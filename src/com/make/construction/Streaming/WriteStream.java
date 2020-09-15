@@ -11,11 +11,9 @@ public class WriteStream extends FileHandler implements OutputFileHandler{
     }
 
     @Override
-    public void write() throws IOException {
-
-        FileWriter fileWriter = new FileWriter(super.filePath);
-        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-
-
+    public void write(LineHandler lineHandler) throws IOException {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(super.filePath))){
+            bufferedWriter.write(lineHandler.getLine());
+        }
     }
 }

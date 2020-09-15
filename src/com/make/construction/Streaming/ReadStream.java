@@ -5,36 +5,30 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ReadStream extends FileHandler implements InputFileHandler {
-
-    private ArrayList<String> errorList;
-    private BufferedReader bufferedReader;
 
     public ReadStream(String filePath) {
         super(filePath);
     }
 
     @Override
-    public void read() throws IOException {
-        this.bufferedReader = new BufferedReader(new FileReader(super.filePath));
+    public Result read() throws IOException {
         String readLine;
         String lastLine = null;
         Result result = new Result();
-        errorList = new ArrayList<>();
-        try {
-            while ((readLine = this.bufferedReader.readLine()) != null) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(super.filePath))) {
+            while ((readLine = bufferedReader.readLine()) != null) {
                 if (readLine.contains("ERROR")) {
-                    this.errorList.add(readLine);
+                    result.setEmailBuffer(readLine);
                 }
                 lastLine = readLine;
             }
-        }finally {
-            result.setLastLine(lastLine);
+        } finally {
+            result.setLine(lastLine);
         }
-
+        return result;
     }
-
-
 
 }

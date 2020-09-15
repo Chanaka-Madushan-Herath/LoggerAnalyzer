@@ -5,7 +5,6 @@ import java.io.*;
 
 public class FileLoader {
 
-
     private String filePath;
     private FileReader fileReader;
     private BufferedReader bufferedReader;
