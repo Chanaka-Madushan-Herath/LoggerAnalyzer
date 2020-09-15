@@ -7,18 +7,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ReadStream extends FileHandler implements InputFileHandler {
+public class LogStream extends FileHandler implements InputFileHandler {
 
-    public ReadStream(String filePath) {
+    private BufferedReader bufferedReader;
+
+    public LogStream(String filePath) {
         super(filePath);
     }
 
-    @Override
-    public Result read() throws IOException {
+    public Result readLog() throws IOException {
         String readLine;
         String lastLine = null;
         Result result = new Result();
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(super.filePath))) {
+        try {
             while ((readLine = bufferedReader.readLine()) != null) {
                 if (readLine.contains("ERROR")) {
                     result.setEmailBuffer(readLine);
@@ -30,5 +31,18 @@ public class ReadStream extends FileHandler implements InputFileHandler {
         }
         return result;
     }
+
+    @Override
+    public void setReadingOffset(String filePath) throws IOException{
+        this.bufferedReader= new BufferedReader(new FileReader(super.filePath));
+        SaveStream saveStream = new SaveStream(filePath);
+        saveStream.read(this);
+    }
+
+    @Override
+    public BufferedReader getReader() {
+        return this.bufferedReader;
+    }
+
 
 }

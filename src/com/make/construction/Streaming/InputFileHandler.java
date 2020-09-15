@@ -1,10 +1,14 @@
 package com.make.construction.Streaming;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface InputFileHandler {
-    Result read() throws IOException;
+
+    void setReadingOffset(String filePath) throws IOException;
+    BufferedReader getReader();
+
 
 
 
