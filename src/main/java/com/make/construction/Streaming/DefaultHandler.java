@@ -2,25 +2,31 @@ package com.make.construction.Streaming;
 
 import com.make.construction.databases.Emails;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class DefaultHandler extends FileHandler{
+
+    public static final String DEFAULTMAILPATH = "src/main/java/com/make/construction/databases/SecondaryDatabaseForMails.txt";
     public DefaultHandler(String filePath) {
         super(filePath);
     }
 
-    public Emails readFile() throws IOException {
+    public Emails readFile() {
 
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(super.filePath));
-        Emails emails = new Emails();
-        String readLine;
-        while ((readLine = bufferedReader.readLine()) != null) {
-            emails.setEmailList(readLine);
+        Emails emails = null;
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(super.filePath))) {
+            emails = new Emails();
+            String readLine;
+            while ((readLine = bufferedReader.readLine()) != null) {
+                emails.setEmailList(readLine);
+            }
+            System.out.println(OutputMessage.SUCCESS.getMessage());
+        } catch (IOException e) {
+            System.err.println(OutputMessage.STREAMINGERROR.getMessage());
         }
         return emails;
     }
+
+
 
 }

@@ -33,9 +33,9 @@ public class LogStream extends FileHandler implements InputFileHandler {
             System.out.println("There are " + i + " errors");
         } finally {
             if (lastLine != null) {
-                System.out.println("Saving the file");
+                System.out.println(OutputMessage.SAVING.getMessage());
                 result.setLine(lastLine);
-                SaveStream saveStream = new SaveStream("C:\\Users\\Ovindu\\Desktop\\project2\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\test.txt");
+                SaveStream saveStream = new SaveStream(SaveStream.defaultSavingPath);
                 saveStream.write(result);
             }
         }

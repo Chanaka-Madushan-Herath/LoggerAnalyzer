@@ -10,33 +10,32 @@ import java.sql.Statement;
 public class Retriever {
 
     private ResultSet resultSet;
+    private Emails emails;
 
     public Emails getMailList() {
 
-        Emails emails = new Emails();
         try {
+            this.emails = new Emails();
             while (resultSet.next()) {
                 emails.setEmailList(resultSet.getString("email"));
             }
         } catch (SQLException e) {
-            try {
-                emails = new DefaultHandler("src/main/java/com/make/construction/databases/SecondaryDatabaseForMails.txt").readFile();
-            } catch (IOException ioException) {
-                System.err.println("There is an error while accessing the databases");
-            }
+            return emails;
         }
         return emails;
 
     }
 
-    public void retrieveMailFromDB(DatabaseConnector databaseConnector) throws SQLException {
+    public void retrieveMailFromDB(DatabaseConnector databaseConnector) {
 
-        Statement statement = databaseConnector.getConnection().createStatement();
-        this.resultSet = statement.executeQuery("SELECT email FROM emails");
+        Statement statement;
+        try {
+            statement = databaseConnector.getConnection().createStatement();
+            this.resultSet = statement.executeQuery("SELECT email from emails");
+        } catch (SQLException e) {
+            emails = new DefaultHandler(DefaultHandler.DEFAULTMAILPATH).readFile();
+        }
 
     }
-
-
-
 
 }
