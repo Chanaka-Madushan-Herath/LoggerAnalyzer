@@ -1,0 +1,103 @@
+Sat Sep 19 11:41:37 IST 2020: The error logs may be sent to the below mails
+neminda99prabhashwara@gmail.com
+2020-01-25 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Outdated stub in index: file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/University_Management_System/out/production/University_Management_System/Chanaka/Authentication.class indexed at 1579534856924 with document  byte size = 3951, char size = -1, doc=DocumentImpl[file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/University_Management_System/out/production/University_Management_System/Chanaka/Authentication.class], docSaved=true, wasIndexedAlready=true, queried at 1579949194157
+2020-01-25 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-25 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-25 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - OS: Windows 10 
+2020-01-25 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Last Action: Run 
+2020-01-25 18:17:59,407 [2726865]  ERROR - designSurface.GridDropLocation - Drop rectangle not empty: (1, 4, 1, 1), component ID=57dbd 
+2020-01-25 18:17:59,411 [2726869]  ERROR - designSurface.GridDropLocation - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-25 18:17:59,411 [2726869]  ERROR - designSurface.GridDropLocation - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-25 18:17:59,414 [2726872]  ERROR - designSurface.GridDropLocation - OS: Windows 10 
+2020-01-25 18:17:59,432 [2726890]  ERROR - designSurface.GridDropLocation - Last Action: EditorDown 
+2020-01-25 18:17:59,432 [2726890]  ERROR - designSurface.GridDropLocation - Current Command: Drop Components 
+2020-01-25 18:59:38,551 [5226009]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Outdated stub in index: file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/University_Management_System/out/production/University_Management_System/Chanaka/Authentication.class indexed at 1579534856924 with document  byte size = 3951, char size = -1, doc=DocumentImpl[file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/University_Management_System/out/production/University_Management_System/Chanaka/Authentication.class], docSaved=true, wasIndexedAlready=true, queried at 1579949194157
+2020-01-25 18:59:38,551 [5226009]  ERROR - j.psi.stubs.StubTreeLoaderImpl - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-25 18:59:38,551 [5226009]  ERROR - j.psi.stubs.StubTreeLoaderImpl - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-25 18:59:38,551 [5226009]  ERROR - j.psi.stubs.StubTreeLoaderImpl - OS: Windows 10 
+2020-01-25 18:59:38,555 [5226013]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Last Action: CheckinProject 
+2020-01-26 09:23:10,656 [ 655876]  ERROR - n.impl.NoSwingUnderWriteAction - AWT events are not allowed inside write action: java.awt.event.KeyEvent[KEY_TYPED,keyCode=0,keyText=Unknown keyCode: 0x0,keyChar=Enter,keyLocation=KEY_LOCATION_UNKNOWN,rawCode=0,primaryLevelUnicode=0,scancode=0,extendedKeyCode=0x0] on win0 
+2020-01-26 09:23:10,658 [ 655878]  ERROR - n.impl.NoSwingUnderWriteAction - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-26 09:23:10,658 [ 655878]  ERROR - n.impl.NoSwingUnderWriteAction - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-26 09:23:10,658 [ 655878]  ERROR - n.impl.NoSwingUnderWriteAction - OS: Windows 10 
+2020-01-26 09:23:10,675 [ 655895]  ERROR - n.impl.NoSwingUnderWriteAction - Current Command: Create Listener 
+2020-01-26 19:17:36,463 [4004531]  ERROR - task.impl.JpsProjectTaskRunner - Multiple invocation of the same callback 
+2020-01-26 19:17:36,466 [4004534]  ERROR - task.impl.JpsProjectTaskRunner - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-26 19:17:36,466 [4004534]  ERROR - task.impl.JpsProjectTaskRunner - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-26 19:17:36,466 [4004534]  ERROR - task.impl.JpsProjectTaskRunner - OS: Windows 10 
+2020-01-28 09:25:45,714 [ 696385]  ERROR - n.impl.NoSwingUnderWriteAction - AWT events are not allowed inside write action: java.awt.event.KeyEvent[KEY_TYPED,keyCode=0,keyText=Unknown keyCode: 0x0,keyChar=Enter,keyLocation=KEY_LOCATION_UNKNOWN,rawCode=0,primaryLevelUnicode=0,scancode=0,extendedKeyCode=0x0] on win0 
+2020-01-28 09:25:45,717 [ 696388]  ERROR - n.impl.NoSwingUnderWriteAction - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-28 09:25:45,717 [ 696388]  ERROR - n.impl.NoSwingUnderWriteAction - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-28 09:25:45,718 [ 696389]  ERROR - n.impl.NoSwingUnderWriteAction - OS: Windows 10 
+2020-01-28 09:25:45,744 [ 696415]  ERROR - n.impl.NoSwingUnderWriteAction - Current Command: Create Listener 
+2020-01-28 09:29:15,872 [ 906543]  ERROR - n.impl.NoSwingUnderWriteAction - AWT events are not allowed inside write action: java.awt.event.KeyEvent[KEY_TYPED,keyCode=0,keyText=Unknown keyCode: 0x0,keyChar=Enter,keyLocation=KEY_LOCATION_UNKNOWN,rawCode=0,primaryLevelUnicode=0,scancode=0,extendedKeyCode=0x0] on win1 
+2020-01-28 09:29:15,873 [ 906544]  ERROR - n.impl.NoSwingUnderWriteAction - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-28 09:29:15,874 [ 906545]  ERROR - n.impl.NoSwingUnderWriteAction - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-28 09:29:15,874 [ 906545]  ERROR - n.impl.NoSwingUnderWriteAction - OS: Windows 10 
+2020-01-28 09:29:15,874 [ 906545]  ERROR - n.impl.NoSwingUnderWriteAction - Current Command: Create Listener 
+2020-01-28 10:04:09,853 [3000524]  ERROR - n.impl.NoSwingUnderWriteAction - AWT events are not allowed inside write action: java.awt.event.InvocationEvent[INVOCATION_DEFAULT,runnable=sun.awt.GlobalCursorManager$NativeUpdater@30cbcbd0,notifier=null,catchExceptions=false,when=1580186049765] on sun.awt.windows.WToolkit@2324eac1 
+2020-01-28 10:04:09,855 [3000526]  ERROR - n.impl.NoSwingUnderWriteAction - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-28 10:04:09,855 [3000526]  ERROR - n.impl.NoSwingUnderWriteAction - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-28 10:04:09,855 [3000526]  ERROR - n.impl.NoSwingUnderWriteAction - OS: Windows 10 
+2020-01-28 10:04:09,855 [3000526]  ERROR - n.impl.NoSwingUnderWriteAction - Current Command: Create Listener 
+2020-01-28 10:38:13,549 [5044220]  ERROR - plication.TransactionGuardImpl - Write-unsafe context! Model changes are allowed from write-safe contexts only. Please ensure you're using invokeLater/invokeAndWait with a correct modality state (not "any"). See TransactionGuard documentation for details.
+2020-01-28 10:38:13,550 [5044221]  ERROR - plication.TransactionGuardImpl - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-28 10:38:13,550 [5044221]  ERROR - plication.TransactionGuardImpl - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-28 10:38:13,550 [5044221]  ERROR - plication.TransactionGuardImpl - OS: Windows 10 
+2020-01-28 10:38:13,550 [5044221]  ERROR - plication.TransactionGuardImpl - Last Action: GuiDesigner.PreviewForm 
+2020-01-28 10:38:13,550 [5044221]  ERROR - plication.TransactionGuardImpl - Current Command:  
+2020-01-28 10:45:38,028 [5488699]  ERROR - n.impl.NoSwingUnderWriteAction - AWT events are not allowed inside write action: java.awt.event.KeyEvent[KEY_TYPED,keyCode=0,keyText=Unknown keyCode: 0x0,keyChar=Enter,keyLocation=KEY_LOCATION_UNKNOWN,rawCode=0,primaryLevelUnicode=0,scancode=0,extendedKeyCode=0x0] on win2 
+2020-01-28 10:45:38,029 [5488700]  ERROR - n.impl.NoSwingUnderWriteAction - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-28 10:45:38,029 [5488700]  ERROR - n.impl.NoSwingUnderWriteAction - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-28 10:45:38,029 [5488700]  ERROR - n.impl.NoSwingUnderWriteAction - OS: Windows 10 
+2020-01-28 10:45:38,029 [5488700]  ERROR - n.impl.NoSwingUnderWriteAction - Current Command: Create Listener 
+2020-01-28 11:31:28,840 [8239511]  ERROR - plication.TransactionGuardImpl - Write-unsafe context! Model changes are allowed from write-safe contexts only. Please ensure you're using invokeLater/invokeAndWait with a correct modality state (not "any"). See TransactionGuard documentation for details.
+2020-01-28 11:31:28,840 [8239511]  ERROR - plication.TransactionGuardImpl - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-28 11:31:28,840 [8239511]  ERROR - plication.TransactionGuardImpl - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-28 11:31:28,840 [8239511]  ERROR - plication.TransactionGuardImpl - OS: Windows 10 
+2020-01-28 11:31:28,840 [8239511]  ERROR - plication.TransactionGuardImpl - Last Action: EditorBackSpace 
+2020-01-28 11:31:28,840 [8239511]  ERROR - plication.TransactionGuardImpl - Current Command:  
+2020-01-28 22:43:47,642 [20184631]  ERROR - plication.TransactionGuardImpl - Write-unsafe context! Model changes are allowed from write-safe contexts only. Please ensure you're using invokeLater/invokeAndWait with a correct modality state (not "any"). See TransactionGuard documentation for details.
+2020-01-28 22:43:47,644 [20184633]  ERROR - plication.TransactionGuardImpl - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-28 22:43:47,644 [20184633]  ERROR - plication.TransactionGuardImpl - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-28 22:43:47,644 [20184633]  ERROR - plication.TransactionGuardImpl - OS: Windows 10 
+2020-01-28 22:43:47,709 [20184698]  ERROR - plication.TransactionGuardImpl - Last Action: Run 
+2020-01-28 22:43:47,709 [20184698]  ERROR - plication.TransactionGuardImpl - Current Command:  
+2020-01-29 08:29:08,823 [ 427803]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Outdated stub in index: file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/University_Management_System/out/production/University_Management_System/Chanaka/Authentication.class indexed at 1579534856924 with document  byte size = 3951, char size = -1, doc=DocumentImpl[file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/University_Management_System/out/production/University_Management_System/Chanaka/Authentication.class], docSaved=true, wasIndexedAlready=true, queried at 1580227034222
+2020-01-29 08:29:08,823 [ 427803]  ERROR - j.psi.stubs.StubTreeLoaderImpl - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-29 08:29:08,823 [ 427803]  ERROR - j.psi.stubs.StubTreeLoaderImpl - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-29 08:29:08,823 [ 427803]  ERROR - j.psi.stubs.StubTreeLoaderImpl - OS: Windows 10 
+2020-01-29 08:29:08,839 [ 427819]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Last Action: NewForm 
+2020-01-29 08:29:09,604 [ 428584]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Outdated stub in index: file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/University_Management_System/out/production/University_Management_System/Chanaka/Authentication.class indexed at 1579534856924 with document  byte size = 3951, char size = -1, doc=DocumentImpl[file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/University_Management_System/out/production/University_Management_System/Chanaka/Authentication.class], docSaved=true, wasIndexedAlready=true, queried at 1580227034222
+2020-01-29 08:29:09,604 [ 428584]  ERROR - j.psi.stubs.StubTreeLoaderImpl - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-29 08:29:09,604 [ 428584]  ERROR - j.psi.stubs.StubTreeLoaderImpl - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-29 08:29:09,604 [ 428584]  ERROR - j.psi.stubs.StubTreeLoaderImpl - OS: Windows 10 
+2020-01-29 08:29:09,604 [ 428584]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Last Action: NewForm 
+2020-01-29 08:39:24,421 [1043401]  ERROR - n.impl.NoSwingUnderWriteAction - AWT events are not allowed inside write action: java.awt.event.KeyEvent[KEY_TYPED,keyCode=0,keyText=Unknown keyCode: 0x0,keyChar=Enter,keyLocation=KEY_LOCATION_UNKNOWN,rawCode=0,primaryLevelUnicode=0,scancode=0,extendedKeyCode=0x0] on win0 
+2020-01-29 08:39:24,437 [1043417]  ERROR - n.impl.NoSwingUnderWriteAction - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-29 08:39:24,437 [1043417]  ERROR - n.impl.NoSwingUnderWriteAction - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-29 08:39:24,437 [1043417]  ERROR - n.impl.NoSwingUnderWriteAction - OS: Windows 10 
+2020-01-29 08:39:24,437 [1043417]  ERROR - n.impl.NoSwingUnderWriteAction - Current Command: Create Listener 
+2020-01-29 08:39:48,116 [1067096]  ERROR - n.impl.NoSwingUnderWriteAction - AWT events are not allowed inside write action: java.awt.event.KeyEvent[KEY_TYPED,keyCode=0,keyText=Unknown keyCode: 0x0,keyChar=Enter,keyLocation=KEY_LOCATION_UNKNOWN,rawCode=0,primaryLevelUnicode=0,scancode=0,extendedKeyCode=0x0] on win1 
+2020-01-29 08:39:48,116 [1067096]  ERROR - n.impl.NoSwingUnderWriteAction - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-29 08:39:48,116 [1067096]  ERROR - n.impl.NoSwingUnderWriteAction - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-29 08:39:48,116 [1067096]  ERROR - n.impl.NoSwingUnderWriteAction - OS: Windows 10 
+2020-01-29 08:39:48,116 [1067096]  ERROR - n.impl.NoSwingUnderWriteAction - Current Command: Create Listener 
+2020-01-29 08:54:28,496 [1947476]  ERROR - n.impl.NoSwingUnderWriteAction - AWT events are not allowed inside write action: java.awt.event.KeyEvent[KEY_TYPED,keyCode=0,keyText=Unknown keyCode: 0x0,keyChar=Enter,keyLocation=KEY_LOCATION_UNKNOWN,rawCode=0,primaryLevelUnicode=0,scancode=0,extendedKeyCode=0x0] on win2 
+2020-01-29 08:54:28,496 [1947476]  ERROR - n.impl.NoSwingUnderWriteAction - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-29 08:54:28,496 [1947476]  ERROR - n.impl.NoSwingUnderWriteAction - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-29 08:54:28,496 [1947476]  ERROR - n.impl.NoSwingUnderWriteAction - OS: Windows 10 
+2020-01-29 08:54:28,496 [1947476]  ERROR - n.impl.NoSwingUnderWriteAction - Current Command: Create Listener 
+2020-01-29 12:46:10,913 [15849893]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Outdated stub in index: file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/University_Management_System/out/production/University_Management_System/Chanaka/Authentication.class indexed at 1579534856924 with document  byte size = 3951, char size = -1, doc=DocumentImpl[file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/University_Management_System/out/production/University_Management_System/Chanaka/Authentication.class], docSaved=true, wasIndexedAlready=true, queried at 1580282143782
+2020-01-29 12:46:10,916 [15849896]  ERROR - j.psi.stubs.StubTreeLoaderImpl - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-29 12:46:10,917 [15849897]  ERROR - j.psi.stubs.StubTreeLoaderImpl - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-29 12:46:10,917 [15849897]  ERROR - j.psi.stubs.StubTreeLoaderImpl - OS: Windows 10 
+2020-01-29 19:22:16,083 [1142215]  ERROR - api.util.objectTree.ObjectTree - Not disposed pointer: file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/University_Management_System 
+2020-01-29 19:22:16,083 [1142215]  ERROR - api.util.objectTree.ObjectTree - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-29 19:22:16,083 [1142215]  ERROR - api.util.objectTree.ObjectTree - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-29 19:22:16,083 [1142215]  ERROR - api.util.objectTree.ObjectTree - OS: Windows 10 
+2020-01-30 13:10:01,046 [   5516]  ERROR - ij.compiler.impl.CompileDriver - java.util.concurrent.ExecutionException: java.lang.AssertionError: Already disposed: Project (name=OOP-University-Management-System, containerState=DISPOSE_COMPLETED, componentStore=C:\Users\This PC\OneDrive\Desktop\projects\jila\OOP-University-Management-System)  
+2020-01-30 13:10:01,046 [   5516]  ERROR - ij.compiler.impl.CompileDriver - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-30 13:10:01,046 [   5516]  ERROR - ij.compiler.impl.CompileDriver - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-30 13:10:01,046 [   5516]  ERROR - ij.compiler.impl.CompileDriver - OS: Windows 10 
+2020-01-30 13:10:01,077 [   5547]  ERROR - ij.compiler.impl.CompileDriver - Last Action:  

@@ -55,7 +55,7 @@ public class DatabaseConnector {
 
         try {
             this.connection = DriverManager.getConnection(this.serverName, this.userName, this.password);
-            System.out.println("Connection Successful");
+            System.out.println("Database Connection Successful");
         }catch (Exception e) {
             System.out.println(e);
             return 1;

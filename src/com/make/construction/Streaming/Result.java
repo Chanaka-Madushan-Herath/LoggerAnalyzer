@@ -3,7 +3,7 @@ package com.make.construction.Streaming;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Result implements LineHandler{
+public class Result extends ErrorBuffer implements LineHandler{
 
     private List<String> emailBuffer;
     private String timeStamp;
@@ -13,11 +13,13 @@ public class Result implements LineHandler{
         this.emailBuffer = new ArrayList<>();
     }
 
-    public List<String> getEmailBuffer() {
+    @Override
+    public List<String> getErrorBuffer() {
         return emailBuffer;
     }
 
-    public void setEmailBuffer(String message) {
+    @Override
+    public void setErrorBuffer(String message) {
         this.emailBuffer.add(message);
     }
 
