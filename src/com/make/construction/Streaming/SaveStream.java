@@ -17,14 +17,15 @@ public class SaveStream extends FileHandler implements OutputFileHandler{
     @Override
     public void read(InputFileHandler inputFileHandler) throws IOException {
 
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(super.filePath));
-        String timeStamp = bufferedReader.readLine();
-        if (timeStamp != null) {
-            while (!timeStamp.equals(inputFileHandler.getReader().readLine())) {
-                //Reading the logfile until last read line
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(super.filePath))) {
+            String timeStamp = bufferedReader.readLine();
+            if (timeStamp != null) {
+                while (!timeStamp.equals(inputFileHandler.getReader().readLine())) {
+                    //Reading the logfile until last read line
+                }
             }
-        }
 
+        }
     }
 
 }

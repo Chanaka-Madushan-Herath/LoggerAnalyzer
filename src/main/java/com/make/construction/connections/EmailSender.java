@@ -17,8 +17,8 @@ import java.util.List;
 
 public class EmailSender {
 
-    private static String APIKEY = "4bc64febb36bf5a25d93151bf5da4124-d5e69b0b-399c5521";
-    private static String DOMAIN_NAME = "sandbox7fd88cb76ec34d89bcc46d3c161fd7f0.mailgun.org";
+    private static final String APIKEY = "4bc64febb36bf5a25d93151bf5da4124-d5e69b0b-399c5521";
+    private static final String DOMAIN_NAME = "sandbox7fd88cb76ec34d89bcc46d3c161fd7f0.mailgun.org";
     private static MultipartBody multipartBody;
     private static EmailSender emailSender;
     private static List<String> errorBuffer;
