@@ -1,6 +1,8 @@
 package com.make.construction;
 
+import com.make.construction.Streaming.LineHandler;
 import com.make.construction.Streaming.Result;
+import com.make.construction.connections.DefaultMailSender;
 import com.make.construction.connections.EmailSender;
 import com.make.construction.databases.DatabaseConnector;
 import com.make.construction.databases.Emails;
@@ -13,7 +15,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, SQLException, UnirestException {
+    public static void main(String[] args) throws IOException, SQLException {
 
         Scanner scanner = new Scanner(System.in);
         String filePath = scanner.next();
@@ -28,10 +30,10 @@ public class Main {
 
         Result result = logFileLoader.readLatestLogs("D:\\intelliJ JAVA WorkSpace\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\test.txt");
         EmailSender.getInstance()
-                .setErrorMessage(result.getEmailBuffer())
+                .setErrorMessage(result.getErrorBuffer())
                 .setEmailList(emails)
                 .setSubject(result.getSubject())
-                .sendSimpleMessage();
+                .sendMessage();
 
     }
 }

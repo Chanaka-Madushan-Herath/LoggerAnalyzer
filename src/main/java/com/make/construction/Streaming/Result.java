@@ -14,12 +14,12 @@ public class Result extends ErrorBuffer implements LineHandler{
     }
 
     @Override
-    public List<String> getEmailBuffer() {
+    public List<String> getErrorBuffer() {
         return emailBuffer;
     }
 
     @Override
-    public void setEmailBuffer(String message) {
+    public void setErrorBuffer(String message) {
         this.emailBuffer.add(message);
     }
 

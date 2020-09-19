@@ -23,19 +23,20 @@ public class LogStream extends FileHandler implements InputFileHandler {
         try {
             while ((readLine = bufferedReader.readLine()) != null) {
                 if (readLine.contains("ERROR")) {
-                    result.setEmailBuffer(readLine);
+                    result.setErrorBuffer(readLine);
                     i++;
                 }
                 lastLine = readLine;
             }
-
             result.setSubject("There are " + i + " errors");
             System.out.println("There are " + i + " errors");
         } finally {
-            System.out.println("Saving the file");
-            result.setLine(lastLine);
-            SaveStream saveStream = new SaveStream("D:\\intelliJ JAVA WorkSpace\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\test.txt");
-            saveStream.write(result);
+            if (lastLine != null) {
+                System.out.println("Saving the file");
+                result.setLine(lastLine);
+                SaveStream saveStream = new SaveStream("D:\\intelliJ JAVA WorkSpace\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\test.txt");
+                saveStream.write(result);
+            }
         }
         return result;
     }
