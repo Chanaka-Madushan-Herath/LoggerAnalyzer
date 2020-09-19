@@ -8,10 +8,7 @@ import com.make.construction.connections.EmailSender;
 import com.make.construction.databases.DatabaseConnector;
 import com.make.construction.databases.Emails;
 import com.make.construction.databases.Retriever;
-
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
@@ -25,7 +22,7 @@ public class Main {
             Result result = logFileLoader.readLatestLogs(SaveStream.defaultSavingPath);
             if (result != null && result.getErrorBuffer().size() > 0) {
                 DatabaseConnector databaseConnector = new DatabaseConnector.Builder().build();
-                Emails emails = null;
+                Emails emails;
                 if (databaseConnector.connect() == DatabaseConnector.SUCCESSFUL) {
                     Retriever retriever = new Retriever();
                     retriever.retrieveMailFromDB(databaseConnector);
