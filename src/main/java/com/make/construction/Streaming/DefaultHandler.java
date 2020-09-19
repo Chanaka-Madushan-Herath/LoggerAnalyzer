@@ -27,6 +27,4 @@ public class DefaultHandler extends FileHandler{
         return emails;
     }
 
-
-
 }

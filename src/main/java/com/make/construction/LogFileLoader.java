@@ -1,12 +1,8 @@
 package com.make.construction;
 
-import com.make.construction.Streaming.FileDriver;
-import com.make.construction.Streaming.LogStream;
-import com.make.construction.Streaming.Result;
-import com.make.construction.Streaming.UpdateChecker;
+import com.make.construction.Streaming.*;
 
 import java.io.*;
-
 
 public class LogFileLoader implements FileDriver {
 
@@ -32,7 +28,7 @@ public class LogFileLoader implements FileDriver {
             if (e.getClass() == FileNotFoundException.class) {
                 throw (FileNotFoundException)e;
             } else {
-                System.err.println("There was an error reading the files");
+                System.err.println(OutputMessage.STREAMINGERROR.getMessage());
             }
         }
         return null;
@@ -41,7 +37,5 @@ public class LogFileLoader implements FileDriver {
     public Result readLogsFromBeginning() throws IOException {
         return this.logStream.readLog();
     }
-
-
 
 }

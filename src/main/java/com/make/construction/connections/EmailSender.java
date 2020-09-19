@@ -1,9 +1,6 @@
 package com.make.construction.connections;
 
-
-import com.make.construction.Streaming.LineHandler;
 import com.make.construction.Streaming.OutputMessage;
-import com.make.construction.Streaming.Result;
 import com.make.construction.databases.Emails;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
@@ -11,8 +8,6 @@ import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import com.mashape.unirest.request.body.MultipartBody;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -37,7 +32,6 @@ public class EmailSender {
         }
         return emailSender;
     }
-
 
     public void sendMessage() {
 

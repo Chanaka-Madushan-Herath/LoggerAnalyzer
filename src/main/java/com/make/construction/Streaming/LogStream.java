@@ -1,11 +1,8 @@
 package com.make.construction.Streaming;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class LogStream extends FileHandler implements InputFileHandler {
 
@@ -29,8 +26,8 @@ public class LogStream extends FileHandler implements InputFileHandler {
                 lastLine = readLine;
             }
             bufferedReader.close();
-            result.setSubject("There are " + i + " errors");
-            System.out.println("There are " + i + " errors");
+            result.setSubject("There are " + i + " error(s)");
+            System.out.println("There are " + i + " error(s)");
         } finally {
             if (lastLine != null) {
                 System.out.println(OutputMessage.SAVING.getMessage());
@@ -53,6 +50,5 @@ public class LogStream extends FileHandler implements InputFileHandler {
     public BufferedReader getReader() {
         return this.bufferedReader;
     }
-
 
 }

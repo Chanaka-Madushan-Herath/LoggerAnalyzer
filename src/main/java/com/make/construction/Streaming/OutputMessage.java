@@ -8,18 +8,21 @@ public enum OutputMessage {
     CONNECTINGTOGET("Connecting to the local file to get mails..."),
     CONNECTINGTOWRITE("Connecting to the local file to write errors..."),
     SAVING("Saving the file for last read point..."),
-    STREAMINGERROR("There was an error in the system while saving the local files"),
+    STREAMINGERROR("There was an error in the system while dealing with the local files"),
     NOUPDATE("No changes have been made to the log file since the last analyse."),
     NOFILE("The system can't find the file specified"),
-    DATABASECONNECTIONSUCCESS("Database Connection Successful");
+    DATABASECONNECTIONSUCCESS("Database Connection Successful"),
+    NOERRORSINTHEUPDATES("There are no errors in the updated logs");
+
 
     private String message;
 
-    private OutputMessage(String message) {
+    OutputMessage(String message) {
         this.message = message;
     }
 
     public String getMessage() {
         return message;
     }
+
 }
