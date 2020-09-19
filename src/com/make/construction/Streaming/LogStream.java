@@ -28,7 +28,9 @@ public class LogStream extends FileHandler implements InputFileHandler {
                 }
                 lastLine = readLine;
             }
-            System.out.println("there are " + i + " errors");
+
+            result.setSubject("There are " + i + " errors");
+            System.out.println("There are " + i + " errors");
         } finally {
             System.out.println("Saving the file");
             result.setLine(lastLine);

@@ -7,6 +7,7 @@ public class Result implements LineHandler{
 
     private List<String> emailBuffer;
     private String timeStamp;
+    private String subject;
 
     public Result() {
         this.emailBuffer = new ArrayList<>();
@@ -30,4 +31,13 @@ public class Result implements LineHandler{
     public String getLine() {
         return this.timeStamp;
     }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
 }
