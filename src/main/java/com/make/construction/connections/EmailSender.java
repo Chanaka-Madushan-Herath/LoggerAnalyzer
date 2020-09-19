@@ -38,7 +38,7 @@ public class EmailSender {
     }
 
 
-    public void sendMessage() throws IOException {
+    public void sendMessage() {
 
         try {
             HttpResponse<JsonNode> request = multipartBody.asJson();

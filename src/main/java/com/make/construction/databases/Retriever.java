@@ -11,15 +11,19 @@ public class Retriever {
 
     private ResultSet resultSet;
 
-    public Emails getMailList() throws SQLException, IOException {
+    public Emails getMailList() {
 
         Emails emails = new Emails();
-        if (resultSet != null) {
+        try {
             while (resultSet.next()) {
                 emails.setEmailList(resultSet.getString("email"));
             }
-        } else {
-            emails = new DefaultHandler("src/main/java/com/make/construction/databases/SecondaryDatabaseForMails.txt").readFile();
+        } catch (SQLException e) {
+            try {
+                emails = new DefaultHandler("src/main/java/com/make/construction/databases/SecondaryDatabaseForMails.txt").readFile();
+            } catch (IOException ioException) {
+                System.err.println("There is an error while accessing the databases");
+            }
         }
         return emails;
 

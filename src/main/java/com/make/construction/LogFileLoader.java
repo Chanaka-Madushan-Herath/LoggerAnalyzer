@@ -21,14 +21,23 @@ public class LogFileLoader implements FileDriver {
     }
 
     @Override
-    public Result readLatestLogs(String filePath) throws IOException {
+    public Result readLatestLogs(String filePath) throws FileNotFoundException {
         UpdateChecker updateChecker = new UpdateChecker(this.filePath);
-        if (updateChecker.check(filePath) == UPDATED) {
-            this.logStream.setReadingOffset(filePath);
-            return this.logStream.readLog();
-        } else {
-            return null;
+        try {
+            if (updateChecker.check(filePath) == UPDATED) {
+                this.logStream.setReadingOffset(filePath);
+                return this.logStream.readLog();
+            } else {
+                return null;
+            }
+        } catch (IOException e) {
+            if (e.getClass() == FileNotFoundException.class) {
+                throw (FileNotFoundException)e;
+            } else {
+                System.err.println("There was an error reading the files");
+            }
         }
+        return null;
     }
 
     public Result readLogsFromBeginning() throws IOException {
