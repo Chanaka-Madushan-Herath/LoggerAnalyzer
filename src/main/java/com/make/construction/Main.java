@@ -23,9 +23,8 @@ public class Main {
         LogFileLoader logFileLoader = new LogFileLoader(filePath);
         try {
             Result result = logFileLoader.readLatestLogs(SaveStream.defaultSavingPath);
-            if (result != null) {
-                DatabaseConnector databaseConnector = new DatabaseConnector.Builder()
-                        .build();
+            if (result != null && result.getErrorBuffer().size() > 0) {
+                DatabaseConnector databaseConnector = new DatabaseConnector.Builder().build();
                 Emails emails = null;
                 if (databaseConnector.connect() == DatabaseConnector.SUCCESSFUL) {
                     Retriever retriever = new Retriever();
@@ -40,6 +39,8 @@ public class Main {
                         .setSubject(result.getSubject())
                         .sendMessage();
 
+            } else if (result != null && result.getErrorBuffer().size() == 0) {
+                System.out.println(OutputMessage.NOERRORSINTHEUPDATES.getMessage());
             } else {
                 System.out.println(OutputMessage.NOUPDATE.getMessage());
             }

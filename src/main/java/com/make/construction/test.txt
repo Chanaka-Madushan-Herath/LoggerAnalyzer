@@ -1,1 +1,1 @@
-2020-09-09 19:20:38,732 [19852136]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2020-01-26 09:21:40,010 [ 565230]   INFO - ignSurface.GridInsertProcessor - GridInsertProcessor.processDragEvent(): dropLocation GridInsertLocation(ColumnAfter, row=1, col=0)
