@@ -1,14 +1,12 @@
 package com.make.construction.connections;
 
-import com.make.construction.Streaming.FileHandler;
-import com.make.construction.Streaming.InputFileHandler;
-import com.make.construction.Streaming.LineHandler;
-import com.make.construction.Streaming.OutputFileHandler;
+import com.make.construction.Streaming.*;
 
 import java.io.*;
 
 public class DefaultMailSender extends FileHandler implements OutputFileHandler {
 
+    public static final String DEFAULTMAILSAVINGPATH = "D:\\intelliJ JAVA WorkSpace\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\connections\\DefaultMailing.txt";
 
     public DefaultMailSender(String filePath) {
         super(filePath);

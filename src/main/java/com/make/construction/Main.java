@@ -1,6 +1,9 @@
 package com.make.construction;
 
+import com.make.construction.Streaming.DefaultHandler;
+import com.make.construction.Streaming.OutputMessage;
 import com.make.construction.Streaming.Result;
+import com.make.construction.Streaming.SaveStream;
 import com.make.construction.connections.EmailSender;
 import com.make.construction.databases.DatabaseConnector;
 import com.make.construction.databases.Emails;
@@ -19,23 +22,18 @@ public class Main {
         String filePath = scanner.next();
         LogFileLoader logFileLoader = new LogFileLoader(filePath);
         try {
-            Result result = logFileLoader.readLatestLogs("D:\\intelliJ JAVA WorkSpace\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\test.txt");
-
+            Result result = logFileLoader.readLatestLogs(SaveStream.defaultSavingPath);
             if (result != null) {
                 DatabaseConnector databaseConnector = new DatabaseConnector.Builder()
                         .build();
-                databaseConnector.connect();
-                Retriever retriever = new Retriever();
-                try {
-                    retriever.retrieveMailFromDB(databaseConnector);
-                } catch (SQLException throwable) {
-                    throwable.printStackTrace();
-                    return;
-                }
                 Emails emails = null;
-
-                emails = retriever.getMailList();
-
+                if (databaseConnector.connect() == DatabaseConnector.SUCCESSFUL) {
+                    Retriever retriever = new Retriever();
+                    retriever.retrieveMailFromDB(databaseConnector);
+                    emails = retriever.getMailList();
+                } else {
+                    emails = new DefaultHandler(DefaultHandler.DEFAULTMAILPATH).readFile();
+                }
                 EmailSender.getInstance()
                         .setErrorMessage(result.getErrorBuffer())
                         .setEmailList(emails)
@@ -43,10 +41,10 @@ public class Main {
                         .sendMessage();
 
             } else {
-                System.out.println("No changes have been made to the log file since the last analyse.");
+                System.out.println(OutputMessage.NOUPDATE.getMessage());
             }
         } catch (FileNotFoundException e) {
-            System.err.println("The system can't find the file specified");
+            System.err.println(OutputMessage.NOFILE.getMessage());
         }
     }
 }

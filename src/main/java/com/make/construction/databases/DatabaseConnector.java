@@ -1,5 +1,7 @@
 package com.make.construction.databases;
 
+import com.make.construction.Streaming.OutputMessage;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -10,6 +12,8 @@ public class DatabaseConnector {
     private String userName;
     private String password;
     private Connection connection;
+    public static final int SUCCESSFUL = 0;
+    public static final int UNSUCCESSFUL = 1;
 
     private DatabaseConnector(Builder builder) {
         this.password = builder.password;
@@ -56,12 +60,11 @@ public class DatabaseConnector {
         try {
             this.connection = DriverManager.getConnection(this.serverName, this.userName, this.password);
             System.out.println("Database Connection Successful");
-        }catch (Exception e) {
-            System.out.println(e);
-            return 1;
-
+        }catch (SQLException e) {
+            System.out.println(OutputMessage.DATABASEERROR.getMessage() + OutputMessage.CONNECTINGTOGET.getMessage());
+            return UNSUCCESSFUL;
         }
-        return 0;
+        return SUCCESSFUL;
     }
 
     public Connection getConnection() {

@@ -12,8 +12,6 @@ public class LogFileLoader implements FileDriver {
 
     private final String filePath;
     private final LogStream logStream;
-    private static final int UPDATED = 0;
-    private static final int NOTUPDATED = 1;
 
     public LogFileLoader(String filePath) {
         this.filePath = filePath;
@@ -24,7 +22,7 @@ public class LogFileLoader implements FileDriver {
     public Result readLatestLogs(String filePath) throws FileNotFoundException {
         UpdateChecker updateChecker = new UpdateChecker(this.filePath);
         try {
-            if (updateChecker.check(filePath) == UPDATED) {
+            if (updateChecker.check(filePath) == UpdateChecker.UPDATED) {
                 this.logStream.setReadingOffset(filePath);
                 return this.logStream.readLog();
             } else {

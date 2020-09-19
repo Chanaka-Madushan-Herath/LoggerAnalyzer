@@ -3,6 +3,9 @@ package com.make.construction.Streaming;
 import java.io.*;
 
 public class SaveStream extends FileHandler implements OutputFileHandler{
+
+    public final static String defaultSavingPath = "D:\\intelliJ JAVA WorkSpace\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\test.txt";
+
     public SaveStream(String filePath) {
         super(filePath);
     }
@@ -12,6 +15,7 @@ public class SaveStream extends FileHandler implements OutputFileHandler{
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(super.filePath))){
             bufferedWriter.write(lineHandler.getLine());
         }
+        System.out.println(OutputMessage.SUCCESS.getMessage());
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.make.construction.connections;
 
 import com.make.construction.Streaming.LineHandler;
+import com.make.construction.Streaming.OutputMessage;
 import com.make.construction.Streaming.Result;
 import com.make.construction.databases.Emails;
 
@@ -13,14 +14,14 @@ public class LocalContentSaver {
     private DefaultMailSender defaultMailSender;
 
     public LocalContentSaver() {
-        this.defaultMailSender = new DefaultMailSender("src/main/java/com/make/construction/connections/DefaultMailing.txt");
+        this.defaultMailSender = new DefaultMailSender(DefaultMailSender.DEFAULTMAILSAVINGPATH);
 
     }
 
     public void saveMails(Emails emails) {
         LineHandler lineHandlerForSubject = new Result();
         Date date = new Date();
-        lineHandlerForSubject.setLine(date + ": The error logs may be sent to the below mails");
+        lineHandlerForSubject.setLine("\n" + date + "\nThe error logs may be sent to the below mails:");
         try {
             defaultMailSender.write(lineHandlerForSubject);
             for (String mail : emails.getEmailList()) {
@@ -28,8 +29,10 @@ public class LocalContentSaver {
                 lineHandler.setLine(mail);
                 defaultMailSender.write(lineHandler);
             }
+            lineHandlerForSubject.setLine("");
+            defaultMailSender.write(lineHandlerForSubject);
         } catch (IOException e) {
-            System.err.println("There was an error in the system while saving the local files");
+            System.err.println(OutputMessage.STREAMINGERROR.getMessage());
         }
 
     }
@@ -41,8 +44,9 @@ public class LocalContentSaver {
                 lineHandler.setLine(error);
                 defaultMailSender.write(lineHandler);
             }
+            System.out.println(OutputMessage.SUCCESS.getMessage());
         } catch (IOException e) {
-            System.err.println("There was an error in the system while saving the local files");
+            System.err.println(OutputMessage.STREAMINGERROR.getMessage());
         }
     }
 

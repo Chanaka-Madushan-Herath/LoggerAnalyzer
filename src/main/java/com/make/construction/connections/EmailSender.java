@@ -2,6 +2,7 @@ package com.make.construction.connections;
 
 
 import com.make.construction.Streaming.LineHandler;
+import com.make.construction.Streaming.OutputMessage;
 import com.make.construction.Streaming.Result;
 import com.make.construction.databases.Emails;
 import com.mashape.unirest.http.HttpResponse;
@@ -44,6 +45,7 @@ public class EmailSender {
             HttpResponse<JsonNode> request = multipartBody.asJson();
             System.out.println(request.getStatusText());
         } catch (UnirestException e) {
+            System.out.println(OutputMessage.CONNECTIONERROR.getMessage() + OutputMessage.CONNECTINGTOWRITE.getMessage());
             LocalContentSaver localContentSaver = new LocalContentSaver();
             localContentSaver.saveMails(emails);
             localContentSaver.saveErrorMessages(errorBuffer);
