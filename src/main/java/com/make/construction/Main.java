@@ -31,12 +31,8 @@ public class Main {
                 } else {
                     emails = new DefaultHandler(DefaultHandler.DEFAULTMAILPATH).readFile();
                 }
-                EmailSender.getInstance()
-                        .setErrorMessage(result.getErrorBuffer())
-                        .setEmailList(emails)
-                        .setSubject(result.getSubject())
-                        .sendMessage();
-
+                EmailSender emailSender = new EmailSender(result, emails);
+                emailSender.sendMessage();
             } else if (result != null && result.getErrorBuffer().size() == 0) {
                 System.out.println(OutputMessage.NOERRORSINTHEUPDATES.getMessage());
             } else {
