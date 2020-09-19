@@ -35,7 +35,7 @@ public class LogStream extends FileHandler implements InputFileHandler {
             if (lastLine != null) {
                 System.out.println("Saving the file");
                 result.setLine(lastLine);
-                SaveStream saveStream = new SaveStream("D:\\intelliJ JAVA WorkSpace\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\test.txt");
+                SaveStream saveStream = new SaveStream("C:\\Users\\Ovindu\\Desktop\\project2\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\test.txt");
                 saveStream.write(result);
             }
         }

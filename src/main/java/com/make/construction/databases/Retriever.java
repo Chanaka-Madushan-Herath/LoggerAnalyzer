@@ -32,7 +32,7 @@ public class Retriever {
     public void retrieveMailFromDB(DatabaseConnector databaseConnector) throws SQLException {
 
         Statement statement = databaseConnector.getConnection().createStatement();
-        this.resultSet = statement.executeQuery("SELECT email from emails");
+        this.resultSet = statement.executeQuery("SELECT email FROM emails");
 
     }
 

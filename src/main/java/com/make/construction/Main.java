@@ -19,7 +19,7 @@ public class Main {
         String filePath = scanner.next();
         LogFileLoader logFileLoader = new LogFileLoader(filePath);
         try {
-            Result result = logFileLoader.readLatestLogs("D:\\intelliJ JAVA WorkSpace\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\test.txt");
+            Result result = logFileLoader.readLatestLogs("C:\\Users\\Ovindu\\Desktop\\project2\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\test.txt");
 
             if (result != null) {
                 DatabaseConnector databaseConnector = new DatabaseConnector.Builder()
