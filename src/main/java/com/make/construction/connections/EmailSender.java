@@ -30,7 +30,7 @@ public class EmailSender {
             try {
                 MultipartBody multipartBody = Unirest.post("https://api.mailgun.net/v3/" + DOMAIN_NAME + "/messages")
                         .basicAuth("api", APIKEY)
-                        .field("from", "upsidedowndragon9999@gmail.com")
+                        .field("from", "constructionProject@gmail.com")
                         .field("to", mail)
                         .field("subject", subject);
                 this.setErrorMessage(multipartBody);
