@@ -14,7 +14,6 @@ public class Retriever {
 
     public Emails getMailList() {
 
-
         try {
             this.emails = new Emails();
             while (resultSet.next()) {
@@ -34,13 +33,9 @@ public class Retriever {
             statement = databaseConnector.getConnection().createStatement();
             this.resultSet = statement.executeQuery("SELECT email from emails");
         } catch (SQLException e) {
-            emails = new DefaultHandler("src/main/java/com/make/construction/databases/SecondaryDatabaseForMails.txt").readFile();
+            emails = new DefaultHandler(DefaultHandler.DEFAULTMAILPATH).readFile();
         }
 
-
     }
-
-
-
 
 }

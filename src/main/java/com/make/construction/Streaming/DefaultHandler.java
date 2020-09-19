@@ -6,7 +6,7 @@ import java.io.*;
 
 public class DefaultHandler extends FileHandler{
 
-    public static final String DEFAULTMAILPATH = "D:\\intelliJ JAVA WorkSpace\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\databases\\SecondaryDatabaseForMails.txt";
+    public static final String DEFAULTMAILPATH = "src/main/java/com/make/construction/databases/SecondaryDatabaseForMails.txt";
     public DefaultHandler(String filePath) {
         super(filePath);
     }

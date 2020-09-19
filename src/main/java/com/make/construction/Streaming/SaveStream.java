@@ -4,7 +4,7 @@ import java.io.*;
 
 public class SaveStream extends FileHandler implements OutputFileHandler{
 
-    public final static String defaultSavingPath = "D:\\intelliJ JAVA WorkSpace\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\test.txt";
+    public final static String defaultSavingPath = "src/main/java/com/make/construction/test.txt";
 
     public SaveStream(String filePath) {
         super(filePath);

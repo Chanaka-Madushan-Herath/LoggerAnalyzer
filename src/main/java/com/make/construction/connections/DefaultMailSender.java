@@ -6,7 +6,7 @@ import java.io.*;
 
 public class DefaultMailSender extends FileHandler implements OutputFileHandler {
 
-    public static final String DEFAULTMAILSAVINGPATH = "D:\\intelliJ JAVA WorkSpace\\LoggerAnalyzer\\src\\main\\java\\com\\make\\construction\\connections\\DefaultMailing.txt";
+    public static final String DEFAULTMAILSAVINGPATH = "src/main/java/com/make/construction/connections/DefaultMailing.txt";
 
     public DefaultMailSender(String filePath) {
         super(filePath);

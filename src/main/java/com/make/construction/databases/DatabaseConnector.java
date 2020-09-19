@@ -23,8 +23,8 @@ public class DatabaseConnector {
 
     public static class Builder {
         private static String USER_NAME = "root";
-        private static String PASSWORD = "sesame";
-        private static String SERVER_NAME = "jdbc:mysql://localhost:3306/email_list";
+        private static String PASSWORD = "";
+        private static String SERVER_NAME = "jdbc:mariadb://localhost:3306/email_list";
         private static String PORT = "3306";
         private static String DATABASE = "email_list";
         private String serverName;
@@ -58,8 +58,8 @@ public class DatabaseConnector {
     public int connect() {
 
         try {
-            this.connection = DriverManager.getConnection(this.serverName, this.userName, this.password);
-            System.out.println("Database Connection Successful");
+            this.connection = DriverManager.getConnection(this.serverName, this.userName, password);
+            System.out.println(OutputMessage.DATABASECONNECTIONSUCCESS.getMessage());
         }catch (SQLException e) {
             System.out.println(OutputMessage.DATABASEERROR.getMessage() + OutputMessage.CONNECTINGTOGET.getMessage());
             return UNSUCCESSFUL;
