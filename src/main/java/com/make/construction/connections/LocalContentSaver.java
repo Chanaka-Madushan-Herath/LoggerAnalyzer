@@ -15,7 +15,6 @@ public class LocalContentSaver {
 
     public LocalContentSaver() {
         this.defaultMailSender = new DefaultMailSender(DefaultMailSender.DEFAULTMAILSAVINGPATH);
-
     }
 
     public void saveMails(Emails emails) {
@@ -34,7 +33,6 @@ public class LocalContentSaver {
         } catch (IOException e) {
             System.err.println(OutputMessage.STREAMINGERROR.getMessage());
         }
-
     }
 
     public void saveErrorMessages(List<String> errorBuffer) {

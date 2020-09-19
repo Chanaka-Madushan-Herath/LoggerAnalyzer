@@ -4,7 +4,6 @@ import com.make.construction.Streaming.*;
 
 import java.io.*;
 
-
 public class LogFileLoader implements FileDriver {
 
     private final String filePath;
@@ -38,7 +37,5 @@ public class LogFileLoader implements FileDriver {
     public Result readLogsFromBeginning() throws IOException {
         return this.logStream.readLog();
     }
-
-
 
 }

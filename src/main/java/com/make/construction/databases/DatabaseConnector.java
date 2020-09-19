@@ -22,6 +22,7 @@ public class DatabaseConnector {
     }
 
     public static class Builder {
+
         private static String USER_NAME = "root";
         private static String PASSWORD = "";
         private static String SERVER_NAME = "jdbc:mariadb://localhost:3306/email_list";
@@ -70,4 +71,5 @@ public class DatabaseConnector {
     public Connection getConnection() {
         return connection;
     }
+
 }

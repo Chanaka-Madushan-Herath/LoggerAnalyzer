@@ -17,11 +17,12 @@ public enum OutputMessage {
 
     private String message;
 
-    private OutputMessage(String message) {
+    OutputMessage(String message) {
         this.message = message;
     }
 
     public String getMessage() {
         return message;
     }
+
 }

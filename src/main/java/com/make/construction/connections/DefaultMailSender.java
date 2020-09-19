@@ -22,6 +22,6 @@ public class DefaultMailSender extends FileHandler implements OutputFileHandler 
 
     @Override
     public void read(InputFileHandler inputFileHandler) throws IOException {
-
     }
+
 }

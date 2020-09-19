@@ -1,11 +1,8 @@
 package com.make.construction.Streaming;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class LogStream extends FileHandler implements InputFileHandler {
 
@@ -53,6 +50,5 @@ public class LogStream extends FileHandler implements InputFileHandler {
     public BufferedReader getReader() {
         return this.bufferedReader;
     }
-
 
 }

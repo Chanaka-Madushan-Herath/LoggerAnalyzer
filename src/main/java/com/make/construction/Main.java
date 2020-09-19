@@ -8,6 +8,7 @@ import com.make.construction.connections.EmailSender;
 import com.make.construction.databases.DatabaseConnector;
 import com.make.construction.databases.Emails;
 import com.make.construction.databases.Retriever;
+
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -44,5 +45,7 @@ public class Main {
         } catch (FileNotFoundException e) {
             System.err.println(OutputMessage.NOFILE.getMessage());
         }
+
     }
+
 }

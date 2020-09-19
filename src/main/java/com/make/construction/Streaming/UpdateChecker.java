@@ -23,5 +23,4 @@ public class UpdateChecker extends FileHandler{
         }
     }
 
-
 }
