@@ -10,8 +10,8 @@ import java.io.*;
 
 public class LogFileLoader implements FileDriver {
 
-    private String filePath;
-    private LogStream logStream;
+    private final String filePath;
+    private final LogStream logStream;
     private static final int UPDATED = 0;
     private static final int NOTUPDATED = 1;
 
