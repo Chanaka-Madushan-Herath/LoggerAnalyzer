@@ -28,6 +28,7 @@ public class LogStream extends FileHandler implements InputFileHandler {
                 }
                 lastLine = readLine;
             }
+            bufferedReader.close();
             result.setSubject("There are " + i + " errors");
             System.out.println("There are " + i + " errors");
         } finally {
@@ -42,7 +43,7 @@ public class LogStream extends FileHandler implements InputFileHandler {
     }
 
     @Override
-    public void setReadingOffset(String filePath) throws IOException{
+    public void setReadingOffset(String filePath) throws IOException {
         this.bufferedReader= new BufferedReader(new FileReader(super.filePath));
         SaveStream saveStream = new SaveStream(filePath);
         saveStream.read(this);

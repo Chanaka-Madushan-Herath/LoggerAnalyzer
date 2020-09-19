@@ -3,6 +3,7 @@ package com.make.construction;
 import com.make.construction.Streaming.FileDriver;
 import com.make.construction.Streaming.LogStream;
 import com.make.construction.Streaming.Result;
+import com.make.construction.Streaming.UpdateChecker;
 
 import java.io.*;
 
@@ -10,7 +11,9 @@ import java.io.*;
 public class LogFileLoader implements FileDriver {
 
     private String filePath;
-    LogStream logStream;
+    private LogStream logStream;
+    private static final int UPDATED = 0;
+    private static final int NOTUPDATED = 1;
 
     public LogFileLoader(String filePath) {
         this.filePath = filePath;
@@ -19,8 +22,13 @@ public class LogFileLoader implements FileDriver {
 
     @Override
     public Result readLatestLogs(String filePath) throws IOException {
-        this.logStream.setReadingOffset(filePath);
-        return this.logStream.readLog();
+        UpdateChecker updateChecker = new UpdateChecker(this.filePath);
+        if (updateChecker.check(filePath) == UPDATED) {
+            this.logStream.setReadingOffset(filePath);
+            return this.logStream.readLog();
+        } else {
+            return null;
+        }
     }
 
     public Result readLogsFromBeginning() throws IOException {
