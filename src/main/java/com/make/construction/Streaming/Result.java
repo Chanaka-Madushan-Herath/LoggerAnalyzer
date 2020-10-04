@@ -5,22 +5,22 @@ import java.util.List;
 
 public class Result extends ErrorBuffer implements LineHandler{
 
-    private List<String> emailBuffer;
+    private List<String> errorBuffer;
     private String timeStamp;
     private String subject;
 
     public Result() {
-        this.emailBuffer = new ArrayList<>();
+        this.errorBuffer = new ArrayList<>();
     }
 
     @Override
     public List<String> getErrorBuffer() {
-        return emailBuffer;
+        return errorBuffer;
     }
 
     @Override
     public void setErrorBuffer(String message) {
-        this.emailBuffer.add(message);
+        this.errorBuffer.add(message);
     }
 
 

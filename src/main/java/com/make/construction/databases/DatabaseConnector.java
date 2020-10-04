@@ -59,7 +59,7 @@ public class DatabaseConnector {
     public int connect() {
 
         try {
-            this.connection = DriverManager.getConnection(this.serverName, this.userName, password);
+            this.connection = DriverManager.getConnection(this.serverName, this.userName, this.password);
             System.out.println(OutputMessage.DATABASECONNECTIONSUCCESS.getMessage());
         }catch (SQLException e) {
             System.out.println(OutputMessage.DATABASEERROR.getMessage() + OutputMessage.CONNECTINGTOGET.getMessage());

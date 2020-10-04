@@ -41,7 +41,7 @@ public class LogStream extends FileHandler implements InputFileHandler {
 
     @Override
     public void setReadingOffset(String filePath) throws IOException {
-        this.bufferedReader= new BufferedReader(new FileReader(super.filePath));
+        this.bufferedReader = new BufferedReader(new FileReader(super.filePath));
         SaveStream saveStream = new SaveStream(filePath);
         saveStream.read(this);
     }
